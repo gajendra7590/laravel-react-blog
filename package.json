@@ -25,6 +25,8 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "react-form-validator-core": "^1.0.0",
+        "react-hook-form": "^6.7.0",
         "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0"
     }
