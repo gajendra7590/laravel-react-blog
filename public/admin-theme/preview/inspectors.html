@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Inspection
+Version: 
+Author: 
+
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx">
+<!--[endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Inspection</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta name="description" content="Inspection" />
+	<meta name="keywords" content="Inspection" />
+	<meta name="theme-color" content="#143A5F">
+	<meta name="msapplication-navbutton-color" content="#143A5F">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#143A5F">
+	<meta name="author" content="" />
+	<meta name="MobileOptimized" content="320" />
+	<!--Template style -->
+	<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="../stylesheets/flaticon.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" />
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+</head>
+
+<body>
+	<!-- main wrapper start -->
+	<div class="pr_dash_main_wrapper float_left">
+		<!-- sidebar start -->
+		<div class="gd_fav_sidebar">
+			<div class="gd_fav_sidebar_heading float_left">	<a href="../preview/home.html" class="in_logoo">Inspection</a>
+				<div class="gd_fev_toggle d-none d-sm-none d-md-none d-lg-block d-xl-block">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+			<div class="gd_fav_sidebar_nav float_left">
+				<ul>
+					<li>
+						<a href="../preview/home.html">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								<defs>
+									<clipPath id="clip-path">
+										<rect width="20" height="20" fill="none" />
+									</clipPath>
+								</defs>
+								<g id="Dashboard" clip-path="url(#clip-path)">
+									<path id="Path_435" data-name="Path 435" d="M3,8.491,12,2l9,6.491v10.2a1.931,1.931,0,0,1-2,1.855H5a1.931,1.931,0,0,1-2-1.855Z" transform="translate(-2 -1.073)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<path id="Path_436" data-name="Path 436" d="M9,21.273V12h6v9.273" transform="translate(-2 -1.8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								</g>
+							</svg>	<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="../preview/inspectors.html" class="nav_active">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+								<defs>
+									<clipPath id="clip-path">
+										<rect width="18" height="18" fill="none" />
+									</clipPath>
+								</defs>
+								<g id="Inspectors" clip-path="url(#clip-path)">
+									<path id="Path_444" data-name="Path 444" d="M20,20.564V18.709A3.863,3.863,0,0,0,16,15H8a3.863,3.863,0,0,0-4,3.709v1.855" transform="translate(-3 -2.945)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<ellipse id="Ellipse_340" data-name="Ellipse 340" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(5 1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								</g>
+							</svg>	<span>Inspectors</span>
+						</a>
+					</li>
+					<li>
+						<a href="../preview/clients.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="16.333" viewBox="0 0 19.5 16.333"><defs></defs><g transform="translate(0.25 -42.416)"><g transform="translate(0 42.666)"><path fill="#fff"stroke="#fff" d="M17.417,45.041H13.458v-.792a1.585,1.585,0,0,0-1.583-1.583H7.125a1.585,1.585,0,0,0-1.583,1.583v.792H1.583A1.585,1.585,0,0,0,0,46.624V56.916A1.585,1.585,0,0,0,1.583,58.5H17.417A1.585,1.585,0,0,0,19,56.916V46.624A1.585,1.585,0,0,0,17.417,45.041ZM6.333,44.249a.793.793,0,0,1,.792-.792h4.75a.793.793,0,0,1,.792.792v.792H6.333ZM18.208,56.916a.793.793,0,0,1-.792.792H1.583a.793.793,0,0,1-.792-.792V51.154a1.565,1.565,0,0,0,.792.22H7.917v1.187a.4.4,0,0,0,.4.4h2.375a.4.4,0,0,0,.4-.4V51.374h6.333a1.565,1.565,0,0,0,.792-.22v5.762Zm-9.5-4.75V50.583h1.583v1.583Zm9.5-2.375a.793.793,0,0,1-.792.792H11.083v-.4a.4.4,0,0,0-.4-.4H8.312a.4.4,0,0,0-.4.4v.4H1.583a.793.793,0,0,1-.792-.792V46.624a.793.793,0,0,1,.792-.792H17.417a.793.793,0,0,1,.792.792Z" transform="translate(0 -42.666)"/></g></g></svg>	<span>Clients</span>
+						</a>
+					</li>
+					<li>
+						<a href="../preview/application.html">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="16" viewBox="0 0 14 16">
+								<defs>
+									<clipPath id="clip-path">
+										<rect width="14" height="16" fill="none" />
+									</clipPath>
+								</defs>
+								<g id="Applications" clip-path="url(#clip-path)">
+									<line id="Line_1" data-name="Line 1" y1="10" transform="translate(13 6)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<line id="Line_2" data-name="Line 2" y1="15" transform="translate(7 1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<line id="Line_3" data-name="Line 3" y1="6" transform="translate(1 10)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								</g>
+							</svg>	<span>Applications</span>
+						</a>
+					</li>
+					<li>
+						<a href="../preview/map.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18.417" height="17.1" viewBox="0 0 18.417 17.1">
+								<g id="Map" transform="translate(0.152 0.154)">
+									<g id="Group_202" data-name="Group 202">
+										<path id="Path_1278" data-name="Path 1278" d="M17.772.061a.662.662,0,0,0-.554,0h0L.343,7.519a.555.555,0,0,0-.276.77A.616.616,0,0,0,.509,8.6L6.893,9.673l1.949,6.651.168.3.352.165a.651.651,0,0,0,.088.006A.625.625,0,0,0,10,16.478L18.048.83A.555.555,0,0,0,17.772.061ZM9.727,14.425,8.034,9.077a.6.6,0,0,0-.495-.459L2.557,7.776,16.11,1.857Z" transform="translate(-0.001 0)" fill="#fff" stroke="#fff" stroke-width="0.3" />
+									</g>
+								</g>
+							</svg>	<span>Map</span>
+						</a>
+					</li>
+					<li>
+						<a href="../preview/report.html">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="20" viewBox="0 0 18 20">
+								<defs>
+									<clipPath id="clip-path">
+										<rect width="18" height="20" fill="none" />
+									</clipPath>
+								</defs>
+								<g id="Reports" clip-path="url(#clip-path)">
+									<path id="Path_441" data-name="Path 441" d="M14,2H6A1.931,1.931,0,0,0,4,3.855V18.691a1.931,1.931,0,0,0,2,1.855H18a1.931,1.931,0,0,0,2-1.855V7.564Z" transform="translate(-3 -1.073)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<path id="Path_442" data-name="Path 442" d="M14,2V7.564h6" transform="translate(-3 -1.073)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<line id="Line_6" data-name="Line 6" x1="8" transform="translate(5 11)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<line id="Line_7" data-name="Line 7" x1="8" transform="translate(5 15)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<path id="Path_443" data-name="Path 443" d="M10,9H8" transform="translate(-3 -1.582)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								</g>
+							</svg>	<span>Reports</span>
+						</a>
+					</li>
+					<li>
+						<a href="../preview/users.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24.957" height="17.809" viewBox="0 0 24.957 17.809">
+								<g id="Users" transform="translate(-23.541 -15.772)">
+									<path id="Path_444" data-name="Path 444" d="M10.93,15H7.119A3.119,3.119,0,0,0,4,18.119v1.56" transform="translate(20.541 12.147)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<circle id="Ellipse_340" data-name="Ellipse 340" cx="2.5" cy="2.5" r="2.5" transform="translate(27.249 18.772)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<path id="Path_444-2" data-name="Path 444" d="M17.882,20.206V18.471A3.471,3.471,0,0,0,14.412,15H7.471A3.471,3.471,0,0,0,4,18.471v1.735" transform="translate(29.616 12.375)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<circle id="Ellipse_340-2" data-name="Ellipse 340" cx="3.5" cy="3.5" r="3.5" transform="translate(37.249 16.772)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								</g>
+							</svg><span>Users</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-target="#c2" data-toggle="collapse" class="in_setting_sub">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.4" viewBox="0 0 24 22.4">
+								<g id="settings" transform="translate(1 1)">
+									<circle id="Ellipse_341" data-name="Ellipse 341" cx="3" cy="3" r="3" transform="translate(8 7)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+									<path id="Path_445" data-name="Path 445" d="M19.4,13.982a1.448,1.448,0,0,0,.33,1.688l.06.056a1.761,1.761,0,0,1,0,2.624,2.113,2.113,0,0,1-2.83,0l-.06-.056a1.747,1.747,0,0,0-1.82-.306,1.532,1.532,0,0,0-1,1.4v.158a1.931,1.931,0,0,1-2,1.855,1.931,1.931,0,0,1-2-1.855v-.083A1.543,1.543,0,0,0,9,18.062a1.747,1.747,0,0,0-1.82.306l-.06.056a2.113,2.113,0,0,1-2.83,0,1.761,1.761,0,0,1,0-2.624l.06-.056a1.448,1.448,0,0,0,.33-1.688,1.658,1.658,0,0,0-1.51-.927H3a1.931,1.931,0,0,1-2-1.855A1.931,1.931,0,0,1,3,9.42h.09a1.646,1.646,0,0,0,1.51-1,1.448,1.448,0,0,0-.33-1.688l-.06-.056a1.761,1.761,0,0,1,0-2.624,2.113,2.113,0,0,1,2.83,0l.06.056a1.747,1.747,0,0,0,1.82.306H9a1.532,1.532,0,0,0,1-1.4V2.855A1.931,1.931,0,0,1,12,1a1.931,1.931,0,0,1,2,1.855v.083a1.532,1.532,0,0,0,1,1.4,1.747,1.747,0,0,0,1.82-.306l.06-.056a2.113,2.113,0,0,1,2.83,0,1.761,1.761,0,0,1,0,2.624l-.06.056a1.448,1.448,0,0,0-.33,1.688v.074a1.658,1.658,0,0,0,1.51.927H21A1.931,1.931,0,0,1,23,11.2a1.931,1.931,0,0,1-2,1.855h-.09A1.658,1.658,0,0,0,19.4,13.982Z" transform="translate(-1 -1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								</g>
+							</svg>	<span>Setting</span>
+						</a>
+						<ul id="c2" class="collapse collapsible in_setting_dropdown">
+							<li><a href="../preview/sms_template.html">SMS Templates</a>
+							</li>
+							<li><a href="../preview/email_template.html">E-mail Templates</a>
+							</li>
+							<li><a href="../preview/forms.html">Forms</a>
+							</li>
+							<li><a href="../preview/values.html">Values</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- sidebar End -->
+		<!-- right content main box start -->
+		<div class="gd_fav_right_cont_box">
+			<!-- right content top header start -->
+			<div class="gd_fav_right_top_header float_left">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-6">
+						<div class="in_search_wrapper float_left d-none d-sm-none d-md-none d-lg-block d-xl-block">
+							<input type="text" placeholder="Search user"><i class="flaticon-loupe"></i>
+						</div>
+						<div class="in_responsive_logo d-block d-sm-block d-md-block d-lg-none d-xl-none">	<a href="#">Inspection</a>
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-6 col-6">
+						<div class="gd_fev_toggle d-block d-sm-block d-md-block d-lg-none d-xl-none">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+						<div class="in_profile_box_wrapper">	<span class="br_profile_toggle"><img src="../images/thumbnails/user_single.png" alt="img"> <small>Arya Stark</small></span>
+							<ul class="br_profile_list">
+								<li><a href="#">Billing</a>
+								</li>
+								<li><a href="../preview/profile.html">Profile Settings</a>
+								</li>
+								<li><a href="#">Report / Feedback </a>
+								</li>
+								<li><a href="#">Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- right content top header End -->
+			<!-- right center content Start -->
+			<div class="pr_dash_right_boxes_main float_left">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pr_dash_right_heading">
+							<h3>All Inspectors</h3>
+						</div>
+						<div class="pr_dash_right_add_btns">
+							<ul>
+								<li><a href="../preview/inspectors_csv.html" class="in_btn">Upload CSV</a>
+								</li>
+								<li><a href="../preview/add_inspectors.html" class="in_btn">Add New</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="pr_dash_data_table float_left">
+							<table id="example" class="display nowrap" style="width:100%">
+				<thead>
+					<tr>
+						<th> </th>
+						<th>Inspectors </th>
+						<th>E-mail Address</th>
+						<th>Contact No.</th>
+						<th>Address</th>
+						<th>City</th>
+						<th>Rating</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r1"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r1" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r2"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r2" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r3"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r3" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r4"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r4" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r5"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r5" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r6"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r6" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r7"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r7" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r8"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r8" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r9"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r9" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="../images/thumbnails/user_single.png" alt="img"></td>
+						<td>Topias Kantola</td>
+						<td>topiaskantola@gmail.com</td>
+						<td>888 747 8574</td>
+						<td>110 W Broadway St</td>
+						<td>San Diego</td>
+						<td>2</td>
+						<td>
+							<small data-toggle="collapse" data-target="#r10"><svg xmlns="http://www.w3.org/2000/svg" width="4.065" height="18.294" viewBox="0 0 4.065 18.294"><defs></defs><g transform="translate(-149.333)"><g transform="translate(149.333 0)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 7.114)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g><g transform="translate(149.333 14.229)"><g transform="translate(0)"><circle class="a" cx="2.033" cy="2.033" r="2.033"/></g></g></g></svg></small>
+							<div id="r10" class="collapse collapsible is_table_dropdown">
+								<h4><a href="#">Edit</a></h4>
+								<h4><a href="#">Delete</a></h4>
+								<h4><a href="#">Disable</a></h4>
+							</div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- right center content End -->
+		</div>
+		<!-- right content main box End -->
+		<div class="gd_fav_bottom_footer float_left">
+			<p>Copyright@Inspection system</p>
+		</div>
+	</div>
+	<!-- main wrapper start -->
+	<!-- Main Script Start -->
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+	<script src="../js/custom.js"></script>
+	<!-- custom js-->
+	<script>
+		jQuery(window).on('load', function() {
+			var table = $('#example').DataTable( {
+				
+				rowReorder: {
+					selector: 'td:nth-child(2)'
+				},
+				dom: 'Bfrtip',
+				buttons: [
+					'excel'
+				],
+				responsive: true
+			} );
+			
+			
+	});
+	</script>
+</body>
+
+</html>

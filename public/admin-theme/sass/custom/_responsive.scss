@@ -1,0 +1,568 @@
+@media (max-width: 1300px){
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_process_box h2{
+		font-size:12px;
+	}
+}
+@media (max-width: 1199px){
+	.inspection_grup .inspe_title h3 {
+		font-size: 20px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_user_top_search_wrapper input{
+		width:155px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_app_date_select{
+		width:100%;
+		ul{
+			float:left;
+			li{
+				margin-left:0;
+				margin-top:15px;
+			}
+		}
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_appli_btn{
+		float:left;
+		ul{
+			li{
+				margin-left:0;
+				margin-right:15px;
+				margin-top:15px;
+			}
+		}
+	}
+	.gd_login_main_wrapper .gd_login_left_wrapper{
+		width:445px;
+	}
+	.gd_login_main_wrapper .gd_login_right_wrapper{
+		width:calc(100% - 445px);
+	}
+}
+@media (min-width: 991px){
+	body.active .gd_fav_sidebar {
+		width:65px;
+		-webkit-transition: $transition;
+	  -o-transition: $transition;
+	  -ms-transition: $transition;
+	  -moz-transition: $transition;
+	  transition: $transition;
+	  z-index:1000;
+	  overflow:visible;
+	  .in_logoo{
+		display:none;
+	  }
+	  .gd_fav_sidebar_nav{
+		ul{
+			li{
+				a{
+					span{
+						opacity:0;
+						visibility:hidden;
+					}
+				}
+			}
+		}
+	  }
+	}	
+	body.active .gd_fav_right_cont_box{
+		margin-left:65px;
+		-webkit-transition: $transition;
+	  -o-transition: $transition;
+	  -ms-transition: $transition;
+	  -moz-transition: $transition;
+	  transition: $transition;
+	}
+	body.active .in_setting_dropdown{
+		position:absolute;
+		width:150px !important;
+		right:-150px;
+		background:$primary-color;
+		bottom:0;
+		margin-top:0 !important;
+	}
+	body.active .in_setting_sub{
+		&:after{
+			display:none;
+		}
+	}
+}
+@media (max-width: 991px){
+	.gd_login_main_wrapper{
+		.gd_login_left_wrapper{
+			padding:30px;
+			padding-bottom:0;
+		}
+	}
+	.pr_dash_main_wrapper{
+		.gd_fav_bottom_footer{
+			padding-left:0;
+		}
+	} 
+	.pr_dash_main_wrapper{
+		.gd_fav_sidebar{
+			left:-245px;
+			border-right:1px solid $secondary-color;
+			 -webkit-transition: $transition;
+			  -o-transition: $transition;
+			  -ms-transition: $transition;
+			  -moz-transition: $transition;
+			  transition: $transition;
+			  z-index:1000;
+		}
+		.gd_fav_right_cont_box{
+			margin-left:0;
+		}	
+	}
+	body.active .gd_fav_sidebar {
+		left: 0 !important;
+		-webkit-transition: $transition;
+	  -o-transition: $transition;
+	  -ms-transition: $transition;
+	  -moz-transition: $transition;
+	  transition: $transition;
+	  z-index:1000;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header .gd_fev_right_profile .crm_profile_dropbox_wrapper .list{
+		margin-top:15px;
+	}
+	.pr_dash_right_booking_heading{
+		width:100%;
+	}
+	.pr_dash_date_selct{
+		width:100%;
+		.pr_dash_date_picker{
+			float:left;
+			margin-right:15px;
+			margin-top:15px;
+		}
+		.pr_dash_parking_select{
+			float:left;
+			margin-top:15px;
+		}
+	}
+	.pr_dash_main_wrapper{
+		 .gd_fav_right_cont_box{
+			 .gd_fav_right_top_header{
+				 .gd_fev_right_profile{
+					 .pr_dash_search{
+						width:100%;
+						margin-top:15px;
+						input{
+							width:100%;
+						}
+					 }
+				 }
+			 }
+		 }
+	}
+	.gd_login_main_wrapper{
+		.gd_login_left_wrapper{
+			padding:30px;
+			padding-bottom:0;
+		}
+	}
+	.parking_tbl table tbody tr td {
+		float: left;
+		width: 100%;
+		border-right: 0;
+		border-bottom: 1px solid rgba(51, 53, 84, 0.2);
+	}
+    .parking_tbl table tbody tr td:last-child {
+	  border-bottom: none; 
+	}
+	.parklot-info-item {
+		width: 100% !important;
+ 	}
+    .parklot-info-ele .parklot-info-item:nth-child(2) {
+     padding: 5px 20px;
+    }
+    .parklot-info-ele {
+    	width: 80%;
+    }
+    .parking_tbl .parklot-icn {
+    	float: none;
+    }
+	.parklot-icn{
+		svg{
+			float:left;
+		}
+	}
+	.pr_dash_main_wrapper .gd_fav_sidebar .gd_fav_sidebar_heading .in_logoo{
+		position:unset;
+	}
+	.gd_fev_toggle{
+		margin-top:11px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header{
+		border-bottom:1px solid $primary-color;
+		background:$primary-color;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header .in_profile_box_wrapper .br_profile_toggle small{
+		display:none;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header .in_profile_box_wrapper .br_profile_list{
+		top:64px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_add_insp_box{
+		max-width:100%;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_add_csv_box{
+		max-width:90%;
+	}
+	.inspection_grup .create_ins_app .create_ins_btn {
+		padding: 8px 10px;
+		font-size: 13px;
+	}
+	.inspection_grup .create_ins_app .select_date {
+		width: 245px; 	
+	}
+	.gd_login_main_wrapper .gd_login_left_wrapper{
+		width:345px;
+	}
+	.gd_login_main_wrapper .gd_login_right_wrapper{
+		width:calc(100% - 345px);
+	}
+}
+@media (max-width: 767px){
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header .gd_fev_right_profile .crm_profile_dropbox_wrapper .current img{
+		width:41px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header .gd_fev_right_profile .crm_profile_dropbox_wrapper .nice-select{
+		height: 42px;
+		line-height: 39px;
+	}
+	.gd_fev_toggle{
+		margin-top:12px;
+	}
+	.pr_dash_main_wrapper{
+		 .gd_fav_right_cont_box{
+			 .gd_fav_right_top_header{
+				padding:15px;
+				    background: #143A5F;
+			 }
+			 .pr_dash_right_boxes_main{
+				padding:15px;
+				.pr_dash_process_box{
+					margin-top:15px;
+				}
+				.pr_dash_right_heading{
+					width:100%;
+					h3{
+						font-size:18px;
+						line-height:28px;
+					}
+				}
+				.pr_dash_right_days{
+					width:100%;
+					ul{
+						float:left;
+						margin-top:10px;
+						li{
+							font-size:13px;
+							margin-left: 10px;
+							a{
+								font-size: 13px;
+							}
+						}
+					}
+				}
+			 }
+		 }
+	}
+	.pr_dash_right_booking_heading h3 {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.pr_dash_user_add_heading{
+		width:100%;
+		h3{
+			font-size:18px;
+			line-height:28px;
+		}
+	}
+	.pr_dash_user_add_btn{
+		width:100%;
+		margin-top:10px;
+		a{
+			float:left;
+		}
+	}
+	.pr_user_filters_tabs{
+		padding:15px;
+	}
+	.pr_user_filter_cont{
+		padding:0 15px;
+		padding-bottom:30px;
+	}
+	.pr_user_edit_wrapper{
+		.pr_user_box{
+			padding:15px;
+		}
+	} 
+	.pr_process_form_box{
+		padding:30px 15px;
+	}
+	.pr_user_progress{
+		ul{
+			li{
+				margin-right:50px;
+				width: 15px;
+				height: 15px;
+				&:after {
+					width: 60px;
+					height: 3px;
+					left: 13px;
+					top: 4px;
+				}
+			}
+		}
+	}
+	.pr_dash_user_single_heading2{
+		width:100%;
+	}
+	.pr_user_progress,.pr_prcesss_wrapper h1{
+		margin-top:30px;
+	}
+	.pr_prcesss_wrapper h3{
+		font-size:22px;
+		    line-height: 28px;
+	}
+	.gd_login_main_wrapper{
+		.gd_login_left_wrapper{
+			padding-bottom:60px;
+		}
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .gd_fav_right_top_header .in_profile_box_wrapper .br_profile_list {
+		top: 64px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_right_days ul li:after{
+		right:-5px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_right_add_btns{
+		width:100%;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_right_add_btns ul{
+		float:left;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_right_add_btns ul li{
+		margin-left:0;
+		margin-right:15px;
+		margin-top:15px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_add_csv_box .in_add_insp_upload,.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_add_csv_box{
+		max-width:100%;
+	}
+	.inspection_grup .create_ins_app {
+		margin-top: 15px;
+	}
+	.is_as_map{
+		margin-top:30px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_right_btns {
+		float: left;
+		margin-top: 15px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_user_top_search_wrapper{
+		float:left;
+		width:100%;
+		margin-left:0;
+		margin-top:15px;
+		input{
+			width:100%;
+		}
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .pr_dash_right_add_btns22{
+		float:left !important;
+		width:100% !important;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_add_insp_box .in_add_insp_heading h3{
+		font-size:22px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_af_top_btn{
+		float:left;
+		width:100%;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_af_top_btn ul{
+		float:left;
+		margin-top:15px;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_profile_box .in_add_insp_heading h3{
+	font-size:22px;
+	}
+	.gd_login_main_wrapper .gd_login_right_wrapper{
+		display:none;
+	}
+	.gd_login_main_wrapper .gd_login_left_wrapper{
+		width:100%;
+	}
+}
+@media (max-width: 580px){
+	.pr_dash_main_wrapper{
+		 .gd_fav_right_cont_box{
+			 .pr_dash_right_boxes_main{
+				.pr_dash_right_days{
+					ul{
+						float:left;
+						margin-top:15px;
+						padding:10px;
+						li{
+							font-size:11px;
+							margin-left: 10px;
+							a{
+								font-size: 11px;
+							}
+						}
+					}
+				}
+			 }
+		 }
+	}
+	.pr_dash_user_single_heading{
+		ul{
+			li{
+				font-size:12px;
+				a{
+					font-size:12px;
+				}
+			}
+		}
+	}
+	.pr_user_single_wrapper{
+		 .pr_user_box{
+			 .pr_user_img_wrapper{
+				 .pr_user_img_cont{
+					h4{
+						font-size:28px;
+					}
+					p{
+						font-size: 16px;
+					}
+				 }
+			 }
+		 }
+	}
+	.pr_process_parkl_box .pr_proocess_parking_block ul li a{
+		width:75px;
+	}
+	.pr_process_book_btn ul li:first-child button{
+		width:190px;
+	}
+	.pr_process_book_btn ul li:last-child button{
+		width:190px;
+	}
+	.pr_process_book_btn ul li{
+		float:none;
+	}
+	.pr_process_book_btn ul li:last-child{
+		margin-top:15px;
+		display: inline-block;
+	}
+	.pr_proocess_fout_heading{
+		img{
+			width:100%;
+		}
+		h4{
+			font-size: 30px;
+		}
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_profile_box .in_profile_tabs_box ul{
+		border-bottom:0;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .in_profile_box .in_profile_tabs_box ul li{
+		width:100%;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .in_map_wrapper .in_map_search_wrapper{
+		width:100%;
+		padding:0 15px;
+		margin-left:0;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .in_map_wrapper .in_map_search_wrapper input{
+		width:100%;
+	}
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .in_map_wrapper .in_map_search_wrapper i{
+		left:30px;
+	}
+	.pr_dash_main_wrapper .gd_fav_sidebar{
+		width:190px;
+	}
+}
+@media (max-width: 480px){
+	.pr_dash_date_selct{
+		 .pr_dash_date_picker{
+			margin-right:0;
+			width:100%;
+			input{
+				width:100%;
+			}
+		 }
+		 .pr_dash_parking_select{
+			width:100%;
+			margin-right:0;
+			.nice-select{
+				width:100%;
+			}
+		 }
+	}
+	.pr_user_filters_tabs{
+		ul{
+			li{
+				margin-right:10px;
+				a{
+					font-size: 13px;
+					padding: 0 10px;
+					&:after{
+						bottom:-21px;
+					}
+				}
+			}
+		}
+	}
+	.pr_process_form_box .pr_process_btn ul li:last-child button{
+			margin-left:15px;
+	}
+	.pr_process_form_box .pr_process_btn ul li {
+		width: 47.8%;
+	}
+	.pr_prcesss_wrapper h1{
+		font-size:22px;
+	}
+	.pr_proocess_days{
+		ul{
+			li{
+				width:55px;
+			}
+		}
+	}
+	.pr_lot_heading_left_booking_heading{
+			width:100%;
+		 }
+		 .pr_lot_heading_right_booking_btn{
+			width:100%;
+			a{
+				float:left;
+				margin-top:20px;
+			}
+		 }
+	.inspection_grup .create_ins_app {
+		display: block;
+		width: 100%;
+	}
+	.inspection_grup .create_ins_app .select_date {
+		width: 100%;
+	}
+	.inspection_grup .create_ins_app .create_ins_btn {
+		width: 100%;
+		margin-top: 15px;
+	}	
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .is_as_vc_detail_box .is_as_vc_profile_bot_three_box .is_as_profile_small_box{
+		width:100%;
+	}	
+	.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .is_as_vc_accor_main .is_as_accordi_box .accordion li.open .link,.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .is_as_vc_accor_main .is_as_accordi_box .st_ad_bot_heading h4,.pr_dash_main_wrapper .gd_fav_right_cont_box .pr_dash_right_boxes_main .is_as_vc_accor_main .is_as_accordi_box .accordion .link{
+		font-size:14px;
+	}
+}
+@media (max-width: 380px){
+
+}
+@media (max-width: 320px){
+
+}
