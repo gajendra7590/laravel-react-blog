@@ -28,3 +28,5 @@ Homestead.json
 /.idea/
 /public/images/
 
+composer.lock
+public/js/app.js
