@@ -1,10 +1,34 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import React, { Component,useState,useEffect } from "react";
+import { Link } from 'react-router-dom'; 
+import DataTable from 'react-data-table-component'; 
 
-class AuthorsList extends Component {
-    render() {
-        return (
-            <React.Fragment>
+import Axios from '../../../api-axios/Common.js';
+
+
+function AuthorsList() {
+    const [tableData, setTableData] = useState([]); 
+    useEffect( ()=> {
+        getAuthors()
+       
+    });
+
+    const columns = [
+        { name: 'First Name', selector: 'first_name', sortable: true },
+        { name: 'Last Name',  selector: 'last_name', sortable: true,right: true},
+    ];
+
+    function getAuthors(){
+        Axios.GET('admin/getAuthors')
+        .then( (result) => { 
+            setTableData(result)
+        })
+        .catch( (error) => {
+            console.log(error)
+        }); 
+    } 
+
+    return (
+        <React.Fragment>
                 <div className="row">
                     <div className="col-md-12">
                         <div className="pr_dash_right_heading">
@@ -23,9 +47,17 @@ class AuthorsList extends Component {
                             </ul>
                         </div>
                     </div>
+                    { JSON.stringify(tableData)}
                     <div className="col-md-12">
                         <div className="pr_dash_data_table float_left">
-                            <table
+                            <DataTable 
+                                columns={columns}
+                                data={tableData}
+                                id="example"
+                                className="display nowrap"
+                                style={{width: "100%"}}
+                            />
+                            {/* <table
                                 id="example"
                                 className="display nowrap"
                                 style={{width: "100%"}}
@@ -112,14 +144,11 @@ class AuthorsList extends Component {
                                         </td>
                                     </tr> 
                                 </tbody>
-                            </table>
+                            </table> */}
                         </div>
                     </div>
                 </div>
             </React.Fragment>
-        );
-    }
-}
-
-
+    )
+} 
 export default AuthorsList;

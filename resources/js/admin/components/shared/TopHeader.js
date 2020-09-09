@@ -1,7 +1,21 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 class TopHeader extends Component {
+    constructor(props) {
+      super(props) 
+      this.state = {
+         
+      }; 
+      this.profileToggle = this.profileToggle.bind(this)
+    };
+
+    profileToggle(e){
+        $(".br_profile_list").slideToggle();
+		e.stopPropagation();
+    }
+    
     render() {
         return (
             <React.Fragment>
@@ -19,7 +33,7 @@ class TopHeader extends Component {
                                 <div className="bar3"></div>
                             </div>
                             <div className="in_profile_box_wrapper">
-                                <span className="br_profile_toggle">
+                                <span onClick={ e => this.profileToggle(e) } className="br_profile_toggle">
                                     <img
                                         src="../admin-theme/images/thumbnails/user_single.png"
                                         alt="img"

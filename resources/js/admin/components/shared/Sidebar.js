@@ -1,7 +1,26 @@
 import React, { Component } from "react";
 import { NavLink ,Link } from "react-router-dom";
+import $ from 'jquery';
 
 class Sidebar extends Component {
+   
+    constructor(props) {
+      super(props) 
+      this.state = { 
+      };
+      this.sideBarToggle = this.sideBarToggle.bind(this)
+    };
+    
+     sideBarToggle(e) { 
+        e.preventDefault();
+        var mask = '<div className="mask-overlay">'; 
+        $('body').toggleClass('active');
+        $(mask).hide().appendTo('body').fadeIn('fast');
+        $('.mask-overlay, .manu-close').on('click', function() {
+            $('body').removeClass('active');
+            $('.mask-overlay').remove();
+        }); 
+    } 
     render() {
         return (
             <React.Fragment>
@@ -10,7 +29,9 @@ class Sidebar extends Component {
                         <Link to="/admin/dashboard" href="javascript:void(0);" className="in_logoo">
                             React Blog
                         </Link>
-                        <div className="gd_fev_toggle d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                        <div 
+                             className="gd_fev_toggle d-none d-sm-none d-md-none d-lg-block d-xl-block"
+                             onClick={ e => this.sideBarToggle(e) } >
                             <div className="bar1"></div>
                             <div className="bar2"></div>
                             <div className="bar3"></div>

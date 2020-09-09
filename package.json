@@ -25,9 +25,14 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "bootstrap-sass": "^3.4.1",
+        "font-awesome": "^4.7.0",
+        "react-bs-datatable": "^2.1.1",
+        "react-data-table-component": "^6.11.2",
         "react-form-validator-core": "^1.0.0",
         "react-hook-form": "^6.7.0",
         "react-router": "^5.2.0",
-        "react-router-dom": "^5.2.0"
+        "react-router-dom": "^5.2.0",
+        "styled-components": "^5.1.1"
     }
 }

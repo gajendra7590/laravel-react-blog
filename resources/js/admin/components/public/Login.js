@@ -1,29 +1,64 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import { useForm } from 'react-hook-form'; 
-import AxiosCall from '../../api-axios/Common';
+import Axios from '../../api-axios/Common';
+import { set } from "lodash";
 
 function Login() {
     const { register, handleSubmit, errors } = useForm();
-    const [loginData, setLoginData] = useState({
-        email: "",
-        password: ""
-    });
+    const [loginData, setLoginData] = useState({ email: "", password: "" });
+    const [errorsObj, addError] = useState({ message: "", type: "" });
+    const [loading, setLoading] = useState(false);
+    const history = useHistory();
 
-    const loginInputChange = (event) => { 
+    const loginInputChange = (event) => {
         let inpt = event.target.name;
-        let value = event.target.value; 
+        let value = event.target.value;
         setLoginData({
             ...loginData,
-            [inpt] : value
-        }); 
+            [inpt]: value
+        });
     }
 
-    const loginSubmit = (event) => {
-        event.preventDefault();
-        alert('ddd')
-    }
+    const loginSubmit = (e) => {
+        setLoading (true);
+        Axios.POST('admin/login', loginData)
+            .then((result) => {
+                setLoading(false);
+                if ((typeof (result.status) != '') && (result.status == true)) {
+                    addError({
+                        ...errorsObj,
+                        message: result.message,
+                        type: 'alert-success'
+                    }); 
+                    localStorage.setItem('ADMIN_SESSION',JSON.stringify({
+                        'token' : result.token.access_token,
+                        'adminRole' : result.role,
+                        'adminUser' : result.current_user
+                    }));  
+                    
+                    setTimeout( ()=> {  window.location.href = '/admin/dashboard'; },500)
+                   } else if ((typeof (result.status) != '') && (result.status == false)) {
+                    addError({
+                        ...errorsObj,
+                        message: result.message,
+                        type: 'alert-danger'
+                    });
+                    setTimeout(() => {
+                        addError({
+                            ...errorsObj,
+                            message: '',
+                            type: ''
+                        });
+                    }, 3000)
+                }
+            })
+            .catch((error) => {
+                setLoading(false);
+                console.log(error)
 
+            });
+    }
     return (
         <React.Fragment>
             <div className="gd_login_field_box float_left">
@@ -34,16 +69,23 @@ function Login() {
                         </div>
                     </div>
                     <div className="col-md-12">
-                        <form action="" onSubmit={handleSubmit(loginSubmit)} className="form" encType="multipart/form-data"> 
+                        {
+                            (errorsObj.message != '')
+                                ? (<div className={`alert ${errorsObj.type}`} role="alert">
+                                    {errorsObj.message}
+                                </div>)
+                                : ''
+                        }
+                        <form action="" onSubmit={handleSubmit(loginSubmit)} className="form" encType="multipart/form-data">
                             <div className="form-group">
                                 <label className="form-label" htmlFor="first">
                                     Email
                                 </label>
                                 <input
                                     id="first"
-                                    name="email" 
-                                    onChange={ loginInputChange } 
-                                    value={ loginData.email }
+                                    name="email"
+                                    onChange={loginInputChange}
+                                    value={loginData.email}
                                     ref={register({ required: true })}
                                     className="form-input"
                                     type="email"
@@ -59,8 +101,8 @@ function Login() {
                                 <input
                                     id="last"
                                     name="password"
-                                    onChange={ loginInputChange } 
-                                    value={ loginData.password }
+                                    onChange={loginInputChange}
+                                    value={loginData.password}
                                     ref={register({ required: true })}
                                     className="form-input"
                                     type="password"
@@ -80,7 +122,14 @@ function Login() {
                                 </label>
                             </div>
                             <div className="gd_login_btn">
-                                <button type="submit">Sign In</button>
+                                {
+                                    (loading == false) ?
+                                        <button type="submit">Sign In</button>
+                                        : <button type="submit" style={{ fontSize: '18px'}}>
+                                            <span className="spinner-border spinner-border-sm" style={{ marginRight: '11px'}} role="status" aria-hidden="true"></span>
+                                                Signing in
+                                        </button>
+                                }
                                 <Link
                                     to="/admin/forgot-password"
                                     href="javascript:void(0);"
