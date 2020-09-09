@@ -1,6 +1,5 @@
 import axios from 'axios';
-import $ from 'jquery';
-
+import $ from 'jquery'; 
 let BASE_URL = $('input[name="BS_URL_ASSET"]').val();
 let API_BASE_URL = BASE_URL + 'api/';
 let TOKEN = null;
@@ -12,8 +11,7 @@ if (!!adminData) {
     } catch (e) {
         localStorage.removeItem('ADMIN_SESSION'); 
     }
-} 
- 
+}  
 axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
 const CRUD = {
     GET(URL_POSTFIX, DATA = {}) {

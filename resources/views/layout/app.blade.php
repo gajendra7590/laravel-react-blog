@@ -22,6 +22,8 @@
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('/admin-theme/stylesheets/style.css') }}" />
         
         <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('/_custom/custom.app.css') }}">
+
     </head>
 
     <body>

@@ -45,6 +45,12 @@ export const protectedRoutes = [
         exact: true
     },
     {
+        key: "authors-edit",        
+        path: "/admin/authors/edit/:id",
+        component: AuthorsAdd,
+        exact: true
+    },
+    {
         key: "users",
         path: "/admin/users",
         component: ListUser,

@@ -1,32 +1,12 @@
-import React, { Component,useState,useEffect } from "react";
-import { Link } from 'react-router-dom'; 
-import DataTable from 'react-data-table-component'; 
+import React, { useEffect } from "react";
+import { connect } from 'react-redux';
+import { getAuthor } from '../../../redux'; 
+import { Link } from 'react-router-dom';  
 
-import Axios from '../../../api-axios/Common.js';
-
-
-function AuthorsList() {
-    const [tableData, setTableData] = useState([]); 
+function AuthorsList( props ) {
     useEffect( ()=> {
-        getAuthors()
-       
-    });
-
-    const columns = [
-        { name: 'First Name', selector: 'first_name', sortable: true },
-        { name: 'Last Name',  selector: 'last_name', sortable: true,right: true},
-    ];
-
-    function getAuthors(){
-        Axios.GET('admin/getAuthors')
-        .then( (result) => { 
-            setTableData(result)
-        })
-        .catch( (error) => {
-            console.log(error)
-        }); 
-    } 
-
+        props.getAuthor();       
+    },[]);  
     return (
         <React.Fragment>
                 <div className="row">
@@ -47,17 +27,12 @@ function AuthorsList() {
                             </ul>
                         </div>
                     </div>
-                    { JSON.stringify(tableData)}
+                    { 
+                       //JSON.stringify(props.users)
+                    }
                     <div className="col-md-12">
-                        <div className="pr_dash_data_table float_left">
-                            <DataTable 
-                                columns={columns}
-                                data={tableData}
-                                id="example"
-                                className="display nowrap"
-                                style={{width: "100%"}}
-                            />
-                            {/* <table
+                        <div className="pr_dash_data_table"> 
+                            <table
                                 id="example"
                                 className="display nowrap"
                                 style={{width: "100%"}}
@@ -70,85 +45,45 @@ function AuthorsList() {
                                         <th>Contact No.</th>
                                         <th>Address</th>
                                         <th>City</th>
-                                        <th></th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody> 
-                                    <tr>
-                                        <td>Topias</td>
-                                        <td>Kantola</td>
-                                        <td>topiaskantola@gmail.com</td>
-                                        <td>888 747 8574</td>
-                                        <td>110 W Broadway St</td>
-                                        <td>San Diego</td>
-                                        <td>
-                                            <small
-                                                data-toggle="collapse"
-                                                data-target="#r3"
-                                            >
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="4.065"
-                                                    height="18.294"
-                                                    viewBox="0 0 4.065 18.294"
-                                                >
-                                                    <defs></defs>
-                                                    <g transform="translate(-149.333)">
-                                                        <g transform="translate(149.333 0)">
-                                                            <g transform="translate(0)">
-                                                                <circle
-                                                                    className="a"
-                                                                    cx="2.033"
-                                                                    cy="2.033"
-                                                                    r="2.033"
-                                                                />
-                                                            </g>
-                                                        </g>
-                                                        <g transform="translate(149.333 7.114)">
-                                                            <g transform="translate(0)">
-                                                                <circle
-                                                                    className="a"
-                                                                    cx="2.033"
-                                                                    cy="2.033"
-                                                                    r="2.033"
-                                                                />
-                                                            </g>
-                                                        </g>
-                                                        <g transform="translate(149.333 14.229)">
-                                                            <g transform="translate(0)">
-                                                                <circle
-                                                                    className="a"
-                                                                    cx="2.033"
-                                                                    cy="2.033"
-                                                                    r="2.033"
-                                                                />
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                            </small>
-                                            <div
-                                                id="r3"
-                                                className="collapse collapsible is_table_dropdown"
-                                            >
-                                                <h4>
-                                                    <a href="#">Edit</a>
-                                                </h4>
-                                                <h4>
-                                                    <a href="#">Delete</a>
-                                                </h4>
-                                                <h4>
-                                                    <a href="#">Disable</a>
-                                                </h4>
-                                            </div>
-                                        </td>
-                                    </tr> 
+                                <tbody>  
+                                    { (props.users.author_list.length > 0) && props.users.author_list.map( (author,index) => {
+                                        return  <tr key={index}>
+                                                        <td>{ (author.first_name)??'---' }</td>
+                                                        <td>{ (author.last_name)??'---' }</td>
+                                                        <td>{ (author.email)??'---' }</td>
+                                                        <td>{ (author.phone)??'---' }</td>
+                                                        <td>{ (author.address_line)??'---' }</td>
+                                                        <td>{ (author.city)??'---' }</td>
+                                                        <td>
+                                                            <a href="" className="in_btn table_btn_grp">delete</a>
+                                                            <Link to={`/admin/authors/edit/${author.id}`} className="in_btn table_btn_grp">edit</Link>
+                                                        </td> 
+                                                </tr> 
+                                    }) } 
                                 </tbody>
-                            </table> */}
+                            </table>
                         </div>
                     </div>
                 </div>
             </React.Fragment>
     )
 } 
-export default AuthorsList;
+
+
+const mapStateToProps = state => {
+    return {
+        users : state.users
+    } 
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getAuthor : () => dispatch(getAuthor())
+    } 
+}
+
+ 
+export default connect(mapStateToProps,mapDispatchToProps)(AuthorsList);
