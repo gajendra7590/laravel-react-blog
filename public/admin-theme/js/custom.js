@@ -4,17 +4,16 @@
 	
 	//hl sidebar js
 	
-	$('.gd_fev_toggle').on('click', function(e) {
-        e.preventDefault();
-        var mask = '<div class="mask-overlay">';
-
-        $('body').toggleClass('active');
-        $(mask).hide().appendTo('body').fadeIn('fast');
-        $('.mask-overlay, .manu-close').on('click', function() {
-            $('body').removeClass('active');
-            $('.mask-overlay').remove();
-        });
-    });
+	// $('.gd_fev_toggle').on('click', function(e) {
+    //     e.preventDefault();
+    //     var mask = '<div class="mask-overlay">'; 
+    //     $('body').toggleClass('active');
+    //     $(mask).hide().appendTo('body').fadeIn('fast');
+    //     $('.mask-overlay, .manu-close').on('click', function() {
+    //         $('body').removeClass('active');
+    //         $('.mask-overlay').remove();
+    //     });
+    // });
 	
 	$('input,textarea').focus(function(){
 	  $(this).parents('.form-group').addClass('focused');

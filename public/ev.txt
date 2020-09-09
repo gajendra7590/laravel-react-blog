@@ -1,8 +1,15 @@
-APP_NAME=Laravel
+APP_NAME=React-Blog
 APP_ENV=local
 APP_KEY=base64:DtsTw9MxYKXZLd70hnFvLCS8Jxup1QWIJ9LS3sNCltQ=
 APP_DEBUG=true
-APP_URL=http://localhost
+
+#Local host
+APP_URL=http://127.0.0.1:8000
+ASSET_URL=http://127.0.0.1:8000
+
+#Server
+#APP_URL=http://inspectionsapp.bitcotapps.com
+#ASSET_URL=http://inspectionsapp.bitcotapps.com/public 
 
 LOG_CHANNEL=stack
 
